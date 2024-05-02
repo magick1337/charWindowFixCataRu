@@ -1,0 +1,13 @@
+## Interface: 40400
+
+## Version: 1.0
+## Title: charWindowFixCataRu
+## Title-ruRU: Исправленное окно персонажа
+## Notes: fixes PaperDollFrame.lua bug where someone made the format() function on the RU client return a string with "," when it should be "."
+## Notes: исправляет PaperDollFrame.lua ошибку где, кто-то сделал так что функция format() на ру клиенте возвращает строку с "," когда должна быть "."
+## Author: magick1337
+## DefaultState: enabled
+
+
+
+fixFormatIssue.lua
