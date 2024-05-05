@@ -7,6 +7,7 @@
 ## Notes-ruRU: исправляет PaperDollFrame.lua ошибку где, кто-то сделал так что функция format() на ру клиенте возвращает строку с "," когда должна быть ".". |nДобавляет временную заплатку для PetJournalHealPetButtonSpellName и SpecializationSpecName.
 ## Author: magick1337
 ## DefaultState: enabled
+## X-Curse-Project-ID: 1012317
 
 
 
