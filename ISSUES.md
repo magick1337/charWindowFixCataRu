@@ -1,5 +1,5 @@
 ## ISSUES WITH ruRU CATA CLIENT!
-1. .../Blizzard_CharacterFrame/Cata/PaperDollFrame.lua (char stats info)
+1. **.../Blizzard_CharacterFrame/Cata/PaperDollFrame.lua (char stats info)**
 ```
    --https://warcraft.wiki.gg/wiki/API_BreakUpLargeNumbers
    --https://warcraft.wiki.gg/wiki/API_format
@@ -67,7 +67,7 @@ Locals:
 
 (*temporary) =  "2,88"
 ```
-2. ...Blizzard_InspectUI/Classic/Localization.lua (inspect talent)
+2. **...Blizzard_InspectUI/Classic/Localization.lua (inspect talent)**
 ```
 local function LocalizeInspectTabs_zh()
 	for i=1, (InspectFrame.numTabs or 0) do
@@ -90,7 +90,7 @@ local l10nTable = {
 	ruRU = {
 		localize = function()
 			--Adjust spec font so it doesn't overflow the window
-			SpecializationSpecName:SetFontObject(GameFontNormalHuge); <---- ON CATA CLASSIC SpecializationSpecName FRAME ALWAYS IS nil
+			SpecializationSpecName:SetFontObject(GameFontNormalHuge); <---- ON CATA CLASSIC SpecializationSpecName FRAME ALWAYS IS nil (even in enGB locale). On retail its a frame. 
 		end,
 	},
 	zhCN = {
@@ -134,7 +134,49 @@ Locals:
 (*temporary) = "attempt to index global 'SpecializationSpecName' (a nil value)"
 
 ```
-3. ...Blizzard_Collections/Classic/Localization.lua (collection frame)
+3. **...Blizzard_Collections/Classic/Localization.lua (collection frame)**
 ```
+local l10nTable = {
+	deDE = {},
+	enGB = {},
+	enUS = {},
+	esES = {},
+	esMX = {},
+	frFR = {},
+	itIT = {},
+	koKR = {},
+	ptBR = {},
+	ptPT = {},
+	ruRU = {
+		localize = function()
+			--Adjust text widths for long Russian words
+			PetJournalHealPetButtonSpellName:SetWidth(90); <--- ON CATA CLASSIC PetJournalHealPetButtonSpellName always is nil (even in enGB locale). On retail its a frame. 
+		end,
+	},
+	zhCN = {},
+	zhTW = {},
+};
 
+SetupLocalization(l10nTable);
+```
+*STACK TRACE INFO:*
+```
+11x Blizzard_Collections/Classic/Localization.lua:15: attempt to index global 'PetJournalHealPetButtonSpellName' (a nil value)
+[string "@Blizzard_Collections/Classic/Localization.lua"]:15: in function `localizeFn'
+[string "@Blizzard_SharedXML/Shared/LocalizationMachinery.lua"]:7: in function <.../Blizzard_SharedXML/Shared/LocalizationMachinery.lua:1>
+[string "@Blizzard_SharedXML/Shared/LocalizationMachinery.lua"]:30: in function `SetupLocalization'
+[string "@Blizzard_Collections/Classic/Localization.lua"]:22: in main chunk
+[string "=[C]"]: ?
+[string "=[C]"]: in function `LoadAddOn'
+[string "@Blizzard_UIParent/Cata/UIParent.lua"]:247: in function `UIParentLoadAddOn'
+[string "@Blizzard_UIParent/Cata/UIParent.lua"]:395: in function `CollectionsJournal_LoadUI'
+[string "@Blizzard_UIParent/Cata/UIParent.lua"]:606: in function `SetCollectionsJournalShown'
+[string "@Blizzard_UIParent/Cata/UIParent.lua"]:600: in function `ToggleCollectionsJournal'
+[string "@Blizzard_ActionBar/Cata/MainMenuBarMicroButtons.lua"]:503: in function <.../Blizzard_ActionBar/Cata/MainMenuBarMicroButtons.lua:501>
+
+Locals:
+(*temporary) = nil
+(*temporary) = nil
+(*temporary) = nil
+(*temporary) = "attempt to index global 'PetJournalHealPetButtonSpellName' (a nil value)"
 ```
