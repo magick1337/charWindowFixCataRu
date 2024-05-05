@@ -5,6 +5,5 @@
 
 [MY BUG INFO FOR BLIZZARD DEVELOPERS](https://github.com/magick1337/charWindowFixCataRu/blob/main/ISSUES.md) | [Changelog | Изменения](https://github.com/magick1337/charWindowFixCataRu/blob/main/CHANGELOG.md)
 
-fixFormatIssue.lua
 *Download from* [curseforge.com](https://www.curseforge.com/wow/addons/charwindowfixcataru) | [github release](https://github.com/magick1337/charWindowFixCataRu/releases)
 
