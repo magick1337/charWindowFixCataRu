@@ -1,3 +1,6 @@
+<img src="https://github.com/magick1337/charWindowFixCataRu/blob/main/readme.png" width=50% height=50%>
+
+
 # charWindowFixCataRu
 >fix an format issue on ruRu locale wow cata classic 4.4.0.
 >
