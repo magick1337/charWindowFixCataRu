@@ -1,0 +1,5 @@
+# Only Cataclysm Classic is supported, this .toc file serves as a placeholder.
+## Interface: 00000
+## Title: !charWindowFixCataRu game client not supported.
+## Notes: charWindowFixCataRu only supports Cataclysm Classic.
+
