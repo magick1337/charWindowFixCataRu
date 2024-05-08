@@ -2,4 +2,5 @@
 ## Interface: 00000
 ## Title: !charWindowFixCataRu game client not supported.
 ## Notes: charWindowFixCataRu only supports Cataclysm Classic.
-
+## Author: magick1337
+## X-Curse-Project-ID: 1012317
