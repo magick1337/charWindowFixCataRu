@@ -1,5 +1,4 @@
 if GetLocale() == "ruRU" then
-   local ADDON_NAME = ...;
    if not BULNFormatFix then
       BULNFormatFix = BreakUpLargeNumbers;
       BreakUpLargeNumbers = function(x)
@@ -10,16 +9,20 @@ if GetLocale() == "ruRU" then
             else
                x = tonumber(x)
             end;
-         end; 
-         return x;
-      end; 
+         end;
+         if UnitClassBase("player") == "ROGUE" or UnitClassBase("player") == "DRUID" and GetShapeshiftForm() == 3 then
+            return BULNFormatFix(x);
+         else
+            return x;
+         end;
+
+      end;
    end;
-   print("Исправленное окно персонажа загружено.|n", ADDON_NAME);
-   
+   print("Исправленное окно персонажа загружено.|n", "charWindowFixCataRu");
+
    if not SpecializationSpecName and not PetJournalHealPetButtonSpellName then
-      print("Применено временное исправление окна коллекции, а так же окна талантов другого игрока.|n", ADDON_NAME)
+      print("Применено временное исправление окна коллекции, а так же окна талантов другого игрока.|n", "charWindowFixCataRu")
       CreateFrame("Frame"):CreateFontString("PetJournalHealPetButtonSpellName");
       CreateFrame("Frame"):CreateFontString("SpecializationSpecName");
    end;
-
 end;
