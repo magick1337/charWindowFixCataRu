@@ -1,3 +1,9 @@
+**1.2**: 
+ 1. update toc`s.
+ 2. remove fixformatissue.lua.
+ 3. fix formating Regnerate Energy on rogue and druid(in cat form).
+ 4. delete variable ADDON_NAME replaced to a string.
+
 **1.1**: 
  1. Added charWindowFixCataRu.toc placeholder.
  2. Replace naming fixFormatIssue.lua to ruRUinterfaceFixer.lua.
