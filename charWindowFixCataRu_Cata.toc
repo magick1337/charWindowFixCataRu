@@ -1,6 +1,6 @@
 ## Interface: 40400
 
-## Version: 1.2
+## Version: 1.2a
 ## Title: charWindowFixCataRu
 ## Title-ruRU: Исправленное окно персонажа | charWindowFixCataRu
 ## Notes: Fixes PaperDollFrame.lua bug where someone made the format() function on the RU client return a string with "," when it should be "." |n Adds a temporary fix for PetJournalHealPetButtonSpellName and SpecializationSpecName.
