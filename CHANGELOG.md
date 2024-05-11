@@ -1,3 +1,8 @@
+**1.2a**: 
+ 1. A check has been added to compare game builds; in build 54647, the character window was corrected by the developers.
+ 2. Update version in toc.
+ 3. Set status to DEPRECATED.
+    
 **1.2**: 
  1. update toc`s.
  2. remove fixformatissue.lua.
